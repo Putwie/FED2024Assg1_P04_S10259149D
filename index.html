@@ -5,7 +5,57 @@
 	<meta name="viewport" content="width=device-width">
 	<title>Stray Kids</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    /* Style the button to be centered */
+    button {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Move it back by half its width and height to center it */
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+   /* Style the "Back to Top" button */
+   #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      display: none; /* Initially hidden */
+      z-index: 1000;
+    }
+
+    #backToTop:hover {
+      background-color: #45a049;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      height: 2000px; /* Just for demonstration, creates enough space to scroll */
+    }
+
+
+    </style>
+
+    
 </head>
+
 <body>
   <header>
     <h1>STRAY KIDS FANBASE</h1>
@@ -18,5 +68,29 @@
       <a href="#contact">Contact</a>
     </ul>
   </nav>
+  <button onclick="showMessage()">Click me for Stray Kids ICONIC line</button>
+  <script>
+    // Function to show alert when button is clicked
+    function showMessage() {
+      alert("STRAY KIDS EVERYWHERE ALL AROUND THE WORLD!");
+    }
+    
+    // Show the button when the user scrolls down
+    window.onscroll = function() {
+      var button = document.getElementById("backToTop");
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        button.style.display = "block"; // Show button
+      } else {
+        button.style.display = "none"; // Hide button
+      }
+    };
+
+    // Function to scroll back to the top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+
+  </script>
 </body>
 </html>
