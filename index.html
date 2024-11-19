@@ -37,7 +37,7 @@
       padding: 10px;
       font-size: 20px;
       cursor: pointer;
-      display: none; /* Initially hidden */
+      display: none; 
       z-index: 1000;
     }
 
@@ -47,7 +47,7 @@
 
     body {
       font-family: Arial, sans-serif;
-      height: 2000px; /* Just for demonstration, creates enough space to scroll */
+      height: 2000px; 
     }
 
 
@@ -68,28 +68,9 @@
     </ul>
   </nav>
   <button onclick="showMessage()">Click me for Stray Kids ICONIC line</button>
-  <script>
-    // Function to show alert when button is clicked
-    function showMessage() {
-      alert("STRAY KIDS EVERYWHERE ALL AROUND THE WORLD!");
-    }
-    
-    // Show the button when the user scrolls down
-    window.onscroll = function() {
-      var button = document.getElementById("backToTop");
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        button.style.display = "block"; // Show button
-      } else {
-        button.style.display = "none"; // Hide button
-      }
-    };
+  <button id="backToTop" style="display: none;" onclick="scrollToTop()">Back to Top</button>
 
-    // Function to scroll back to the top
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-
-  </script>
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
