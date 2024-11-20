@@ -6,41 +6,58 @@ body {
     color: #333;
   }
   header {
-    background-color: #2e2c2e;
+    background-color: #292828;
     color: #fff;
     padding: 20px;
     text-align: center;
   }
-  nav {
-    background-color: #b40303;
-    padding: 10px 0;
-    text-align: center;
-  }
-  nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  nav a:hover {
-    text-decoration: underline;
-  }
+/* Navigation bar container styles */
+nav {
+  background-color: #b40303; /* Red background color */
+  padding: 8px 0; /* Moderate padding for a balanced navbar height */
+  text-align: center;
+}
 
-  /* style.css */
+/* Navigation bar container styles */
+nav {
+  background-color: #b40303; /* Red background color */
+  padding: 10px 0; /* Keeps the navbar height balanced */
+  text-align: center;
+}
 
+/* Navigation link styles */
+nav a {
+  color: white; /* White text for nav links */
+  margin: 0 30px; /* Increased horizontal spacing between links */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make text bold */
+}
+
+nav a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Navigation list styles */
 nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Arrange items in a row */
+  justify-content: space-around; /* Add even spacing between items */
+  padding: 0; /* Remove extra padding from the list */
+  margin: 0; /* Remove extra margin from the list */
+}
+
+/* Individual list item styles */
+nav ul li {
+  margin: 0; /* No margin between list items */
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: black;
-  padding: 10px; /* Add space around each item */
-  letter-spacing: 1px; /* Optional: space between letters */
+  text-decoration: none; /* No underline on links */
+  color: white; /* Consistent white text color */
+  padding: 10px 20px; /* Add more internal padding for larger clickable areas */
+  letter-spacing: 1px; /* Slight spacing between letters */
 }
+
 
   main {
     max-width: 1200px;
@@ -78,6 +95,53 @@ nav ul li a {
     text-decoration: underline;
   }
   
+  
+  /* Style for the primary button */
+button {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the button */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #1b0575; 
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Change background color on hover */
+button:hover {
+  background-color: #45a049;
+}
+
+/* Style for the "Back to Top" button */
+#backToTop {
+  position: fixed; /* Stays in position during scrolling */
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 50%; /* Circular shape */
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer; /* Pointer cursor on hover */
+  display: none; /* Hidden by default */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Change background color on hover for "Back to Top" button */
+#backToTop:hover {
+  background-color: #45a049;
+}
+
+/* Style for the body of the page */
+body {
+  font-family: Arial, sans-serif; /* Set the font family */
+  height: 2000px; }
+
 
   @media screen and (max-width: 768px) {
     .navbar .nav-links {
@@ -97,4 +161,4 @@ nav ul li a {
     .menu-toggle {
         display: block;
     }
-}
+  }
