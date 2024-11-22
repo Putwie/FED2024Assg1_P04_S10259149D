@@ -11,6 +11,33 @@ body {
     padding: 20px;
     text-align: center;
   }
+
+
+/* Ensure the body and html take full height and remove default margin */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+/* Flexbox container to center the image horizontally and vertically */
+.image-container {
+  display: flex; /* Use Flexbox for centering */
+  justify-content: center; /* Centers horizontally */
+  align-items: flex-start; /* Aligns items at the start (top of the container) */
+  height: 100vh; /* Use 100% of the viewport height */
+  overflow: hidden; /* Prevents the image from overflowing the container */
+  padding-top: 50px; /* Shifts the image down by 50px */
+}
+
+/* Ensure the image is responsive and visible completely */
+.image-container img {
+  max-width: 100%; /* Ensures the image width does not exceed the container's width */
+  max-height: 100%; /* Ensures the image height does not exceed the container's height */
+  object-fit: contain; /* Maintains the aspect ratio and makes sure the whole image fits inside the container */
+}
+
+
+
 /* Navigation bar container styles */
 nav {
   background-color: #b40303; /* Red background color */
@@ -134,9 +161,9 @@ button:hover {
 
 #backToTop {
   position: fixed; /* Fixed position while scrolling */
-  bottom: 200px; /* Position it at the bottom */
-  right: 200px; /* Position it at the right */
-  background-color: #4A90E2; /* Soft Blue color */
+  bottom: 20px; /* Position it near the bottom */
+  right: 20px; /* Position it near the right */
+  background-color: #a3c5eb;
   color: white;
   border: none;
   border-radius: 5px; /* Rounded corners */
@@ -147,11 +174,10 @@ button:hover {
   z-index: 1000; /* Make sure it appears above other elements */
   width: 150px; /* Fixed width */
   height: 50px;
- 
 }
 
 #backToTop:hover {
-  background-color: #3E7DFF; /* Slightly darker blue on hover */
+  background-color: #8fa1c1; /* Hover color change */
 }
 
 
