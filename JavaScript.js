@@ -3,17 +3,13 @@ function showMessage() {
     alert("STRAY KIDS EVERYWHERE ALL AROUND THE WORLD!");
   }
   
-  // Show the button when scrolling down
-window.onscroll = function() {
-  const button = document.getElementById('backToTop');
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    button.style.display = "block"; // Show the button when scrolled down
-  } else {
-    button.style.display = "none"; // Hide the button when at the top
-  }
-};
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-// Scroll to the top when the button is clicked
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+// Add an event listener for the button
+scrollToTopBtn.addEventListener("click", function () {
+  // Scroll to the top of the page
+  window.scrollTo({
+    top: 0, // Scroll to the top
+    behavior: "smooth" // Smooth scrolling
+  });
+});
