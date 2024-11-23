@@ -146,29 +146,46 @@ nav ul li a {
   margin-bottom: 20px; /* Adds space below the text */
 }
 
+button {
+  padding: 10px 20px; /* Adjust padding for rectangular shape */
+  font-size: 16px; /* Font size for text */
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Slightly rounded corners (optional) */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+}
+
 /*Scroll Button*/
 #scrollToTopBtn {
-  position: fixed; /* Keeps the button in the same position */
-  bottom: 20px; /* Distance from the bottom of the viewport */
-  right: 20px; /* Distance from the right of the viewport */
-  background-color: #26429c; /* Button background color */
-  color: #FFFFFF; /* Text color */
-  border: 2px solid #e8e8e8;
-  border-radius: 50%; /* Makes the button circular */
-  width: 50px;   
-  height: 50px;
-  font-size: 16px;
-  font-weight: bold; 
-  cursor: pointer; /* Changes cursor to pointer on hover */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #FF0000; /* Red background */
+  color: #FFFFFF; /* White text */
+  border: none; /* No border */
+  border-radius: 50%; /* Circular shape */
+  width: 50px; /* Width of the circle */
+  height: 50px; /* Height of the circle */
+  font-size: 16px; /* Text size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  display: flex; /* Use flexbox to align content */
+  align-items: center; /* Vertically center the text */
+  justify-content: center; /* Horizontally center the text */
+  text-align: center; /* Ensures text is centered within the button */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #scrollToTopBtn:hover {
-  background-color: #173ebe; /* Darker blue on hover */
-  transform: scale(1.1); /* Slight zoom on hover */
+  background-color: #CC0000; /* Darker red on hover */
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Glowing red effect */
 }
-
 
 /* Style for the body of the page */
 body {

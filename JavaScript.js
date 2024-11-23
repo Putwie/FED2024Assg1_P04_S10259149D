@@ -4,7 +4,6 @@ function showMessage() {
   }
   
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
 // Add an event listener for the button
 scrollToTopBtn.addEventListener("click", function () {
   // Scroll to the top of the page
