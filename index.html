@@ -6,28 +6,35 @@
 	<title>Stray Kids</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />  
    <style>
-    /* Centering the image container */
-    .center {
-        display: flex;           /* Use Flexbox for centering */
-        justify-content: center; /* Center horizontally */
-        align-items: center;     /* Center vertically */
-        margin-top: 50px;        /* Shift the image down by 50px (adjust as needed) */
-    }
-
-    /* Image styling */
-    .center img {
-        width: 100%;        /* Set image width to 100% of the container */
-        height: auto;       /* Maintain the aspect ratio */
-    }
-
-    .above-text {
-            font-size: 35px;
-            font-weight: bold;
+          /* Container to hold both the image and rectangle box */
+          .container {
+            text-align: center;        /* Center content horizontally */
+            margin-top: 20px;          /* Add some margin above the container */
         }
 
-  </style>
-</head>
+        /* Styling the image */
+        .image-box {
+            width: 100%;               /* Make the image span the entire width */
+            max-width: 600px;          /* Maximum width of the image */
+            height: auto;              /* Maintain aspect ratio */
+            display: block;            /* Make the image block level (to center it) */
+            margin: 0 auto;            /* Center the image horizontally */
+        }
 
+        /* Styling the rectangle box */
+        .rectangle-box {
+            width: 100%;               /* Make the box span the entire width */
+            height: 150px;             /* Set the height of the box */
+            border: 2px solid #000;    /* Add a solid black border */
+            background-color: #f0f0f0; /* Set the background color */
+            padding: 20px;             /* Add space inside the box */
+            text-align: center;        /* Center text horizontally */
+            display: flex;             /* Use Flexbox for vertical centering */
+            justify-content: center;   /* Center text horizontally */
+            align-items: center;       /* Center text vertically */
+            margin-top: 20px;          /* Add space between the image and the rectangle box */
+        }
+  </style>
 <body>
   <header>
     <h1>STRAY KIDS FANBASE</h1>
@@ -39,19 +46,20 @@
       <a href="Music (third page).html">Music</a>
     </ul>
   </nav>
-  
+
   <div class="content">
     <!-- Text above the button -->
     <h2 class="above-text">Welcome to Stray Kids World!<h2>
     <button onclick="showMessage()">Click me for Stray Kids ICONIC line</button>
   </div>
-
   <div class="center">
       <img src="Images/Stray Kids - Grp Photo 1.jpg" alt="Stray Kids Grp Photo" width = 100%>
   </div>
 
   <button id="scrollToTopBtn">↑ Top</button>
-  <p>hifefewfefw</p>
+  <div class="rectangle-box">
+    <p>This is a rectangle box with text inside!</p>
+</div>
   <!-- Link to external JavaScript -->
   <script src="JavaScript.js"></script>
 

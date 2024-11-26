@@ -1,3 +1,13 @@
+   /* Styling the link */
+   .link-with-image {
+    font-size: 20px;          /* Font size for the text */
+    text-decoration: none;    /* Remove underline from the link */
+    color: #333;              /* Text color */
+    display: flex;            /* Use flexbox to align the image and text */
+    align-items: center;      /* Vertically align the image and text */
+    gap: 8px;                 /* Add space between the image and the text */
+}
+
 body {
     font-family: 'Georgia', sans-serif;
     margin: 0;
@@ -23,9 +33,6 @@ p {
     font-size: 18px;
     line-height: 1.6;
 }
-  
-
-
 
 /* Navigation bar container styles */
 nav {
@@ -134,7 +141,7 @@ button {
 }
 
 button:hover {
-  background-color: #3f15d5; /* Slightly darker green on hover */
+  background-color: #4221b7; /* Slightly darker green on hover */
 }
 
 
@@ -148,8 +155,8 @@ button:hover {
   color: #FFFFFF; /* White text */
   border: none; /* No border */
   border-radius: 45%; /* Circular shape */
-  width: 35px; /* Width of the circle */
-  height: 35px; /* Height of the circle */
+  width: 45px; /* Width of the circle */
+  height: 45px; /* Height of the circle */
   font-size: 16px; /* Text size */
   font-weight: bold; /* Bold text */
   cursor: pointer; /* Pointer cursor on hover */
