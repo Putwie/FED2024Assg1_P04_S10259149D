@@ -25,29 +25,6 @@ p {
 }
   
 
-/* Ensure the body and html take full height and remove default margin */
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-/* Flexbox container to center the image horizontally and vertically */
-.image-container {
-  display: flex; /* Use Flexbox for centering */
-  justify-content: center; /* Centers horizontally */
-  align-items: flex-start; /* Aligns items at the start (top of the container) */
-  height: 100vh; /* Use 100% of the viewport height */
-  overflow: hidden; /* Prevents the image from overflowing the container */
-  padding-top: 50px; /* Shifts the image down by 50px */
-}
-
-/* Ensure the image is responsive and visible completely */
-.image-container img {
-  max-width: 100%; /* Ensures the image width does not exceed the container's width */
-  max-height: 100%; /* Ensures the image height does not exceed the container's height */
-  object-fit: contain; /* Maintains the aspect ratio and makes sure the whole image fits inside the container */
-}
-
 
 
 /* Navigation bar container styles */
@@ -149,7 +126,7 @@ nav ul li a {
 button {
   padding: 10px 20px; /* Adjust padding for rectangular shape */
   font-size: 16px; /* Font size for text */
-  background-color: #4CAF50; /* Green background */
+  background-color: #2d0e9d; /* Green background */
   color: white; /* White text color */
   border: none; /* No border */
   border-radius: 5px; /* Slightly rounded corners (optional) */
@@ -157,8 +134,10 @@ button {
 }
 
 button:hover {
-  background-color: #45a049; /* Slightly darker green on hover */
+  background-color: #3f15d5; /* Slightly darker green on hover */
 }
+
+
 
 /*Scroll Button*/
 #scrollToTopBtn {
@@ -168,9 +147,9 @@ button:hover {
   background-color: #FF0000; /* Red background */
   color: #FFFFFF; /* White text */
   border: none; /* No border */
-  border-radius: 50%; /* Circular shape */
-  width: 50px; /* Width of the circle */
-  height: 50px; /* Height of the circle */
+  border-radius: 45%; /* Circular shape */
+  width: 35px; /* Width of the circle */
+  height: 35px; /* Height of the circle */
   font-size: 16px; /* Text size */
   font-weight: bold; /* Bold text */
   cursor: pointer; /* Pointer cursor on hover */

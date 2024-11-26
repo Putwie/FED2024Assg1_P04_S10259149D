@@ -5,12 +5,33 @@
 	<meta name="viewport" content="width=device-width">
 	<title>Stray Kids</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />  
+   <style>
+    /* Centering the image container */
+    .center {
+        display: flex;           /* Use Flexbox for centering */
+        justify-content: center; /* Center horizontally */
+        align-items: center;     /* Center vertically */
+        margin-top: 50px;        /* Shift the image down by 50px (adjust as needed) */
+    }
+
+    /* Image styling */
+    .center img {
+        width: 100%;        /* Set image width to 100% of the container */
+        height: auto;       /* Maintain the aspect ratio */
+    }
+
+    .above-text {
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+  </style>
 </head>
 
 <body>
   <header>
     <h1>STRAY KIDS FANBASE</h1>
-  </header>
+  </header> 
   <nav>
     <ul>
       <a href="index.html">Home</a>
@@ -18,14 +39,17 @@
       <a href="Music (third page).html">Music</a>
     </ul>
   </nav>
+  
   <div class="content">
     <!-- Text above the button -->
-    <p class="above-text"><b>Welcome to Stray Kids World!</b></p>
+    <h2 class="above-text">Welcome to Stray Kids World!<h2>
     <button onclick="showMessage()">Click me for Stray Kids ICONIC line</button>
   </div>
-  <div class="image-container">
-    <img src="Images/Stray Kids - Grp Photo 1.jpg" alt="Centered Image">
+
+  <div class="center">
+      <img src="Images/Stray Kids - Grp Photo 1.jpg" alt="Stray Kids Grp Photo" width = 100%>
   </div>
+
   <button id="scrollToTopBtn">↑ Top</button>
   <p>hifefewfefw</p>
   <!-- Link to external JavaScript -->
