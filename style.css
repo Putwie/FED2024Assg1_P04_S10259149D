@@ -20,7 +20,7 @@ body {
 
 /* Paragraphs with Roboto (clean, readable) */
 p {
-    font-family: 'Times New Roman', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 1.6;
 }
@@ -28,16 +28,10 @@ p {
 /* Navigation bar container styles */
 nav {
   background-color: #b40303; /* Red background color */
-  padding: 8px 0; /* Moderate padding for a balanced navbar height */
+  padding: 15px 0; /* Moderate padding for a balanced navbar height */
   text-align: center;
 }
 
-/* Navigation bar container styles */
-nav {
-  background-color: #b40303; /* Red background color */
-  padding: 10px 0; /* Keeps the navbar height balanced */
-  text-align: center;
-}
 
 /* Navigation link styles */
 nav a {
@@ -45,6 +39,7 @@ nav a {
   margin: 0 30px; /* Increased horizontal spacing between links */
   text-decoration: none; /* Remove underline */
   font-weight: bold; /* Make text bold */
+  font-size: 20px;
 }
 
 nav a:hover {
@@ -79,12 +74,11 @@ nav ul li a {
   section {
     margin-bottom: 40px;
   }
-  h2 {
-    color: #444;
-    margin-bottom: 10px;
-  }
+
   p {
     line-height: 1.6;
+    font-size: 20px;
+    color: #ffffff;   
   }
   .project-card {
     background-color: white;
@@ -97,7 +91,8 @@ nav ul li a {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+    margin-top: 50px;
   }
   footer a {
     color: #f0db4f;
@@ -116,23 +111,24 @@ nav ul li a {
 /* Style for the text above the button */
 .above-text {
   font-family: 'Roboto', sans-serif;
-  font-size: 20px; /* Adjust size as needed */
+  font-size: 35px; /* Adjust size as needed */
   color: #000000; /* Example color */
   margin-bottom: 20px; /* Adds space below the text */
+
 }
 
 /* Container to hold the image */
 .container {
   width: 100%;       /* Make sure the container spans the full width */
   max-width: 100%;   /* Prevent container from overflowing */
-  text-align: center; /* Center other content (optional) */
-  margin-top: 20px;  /* Add margin above the container */
+  text-align: center; 
+  margin-top: 40px;  /* Add margin above the container */
 }
 
 /* Styling the image */
 .image-box {
   width: 100%;        /* Fill the container horizontally */
-  height: 590px;      /* Set the desired height to make it longer */
+  height: 800px;      /* Set the desired height to make it longer */
   object-fit: cover;  /* Ensure the image covers the space without distortion */
   display: block;     /* Block-level element for layout consistency */
 }
@@ -144,31 +140,31 @@ nav ul li a {
 
  /* Styling the rectangle box */
  .rectangle-box {
-  width: 97.36%;               /* Make the box span the entire width */
+  width: 97.6%;               /* Make the box span the entire width */
   height: 150px;             /* Set the height of the box */
-  background-color: #f0f0f0; /* Set the background color */
+  background: linear-gradient(to bottom, #333232, #555252); /* Set the background color */
   padding: 20px;             /* Add space inside the box */
   text-align: center;        /* Center text horizontally */
   display: flex;             /* Use Flexbox for vertical centering */
   justify-content: center;   /* Center text horizontally */
-  align-items: center;       /* Center text vertically */
+  align-items: center;  /* Center text vertically */
   margin-top: 20px;          /* Add space between the image and the rectangle box */
 }
 
 button {
   padding: 10px 20px; /* Adjust padding for rectangular shape */
-  font-size: 16px; /* Font size for text */
-  background-color: #043156; /* Green background */
-  color: white; /* White text color */
+  font-size: 20px; /* Font size for text */
+  background-color: #fb3a3a;
+  color: #FFFFFF; /* White text color */
   border: none; /* No border */
   border-radius: 5px; /* Slightly rounded corners (optional) */
   cursor: pointer; /* Pointer cursor on hover */
+  width: 400px;
 }
 
 button:hover {
-  background-color: #39688f; /* Slightly darker green on hover */
+  background-color: #dc1d1d; /* Slightly darker green on hover */
 }
-
 
 
 /*Scroll Button*/
@@ -176,7 +172,7 @@ button:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #FF0000; /* Red background */
+  background-color: #3d6bea; /* Red background */
   color: #FFFFFF; /* White text */
   border: none; /* No border */
   border-radius: 45%; /* Circular shape */
@@ -194,14 +190,50 @@ button:hover {
 }
 
 #scrollToTopBtn:hover {
-  background-color: #CC0000; /* Darker red on hover */
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Glowing red effect */
+  background-color: #1d4ed2; /* Darker red on hover */
+  box-shadow: 0 0 10px rgba(32, 78, 196, 0.8); /* Glowing red effect */
 }
 
 /* Style for the body of the page */
 body {
   font-family: Arial, sans-serif; /* Set the font family */
   height: 2000px; }
+
+
+  
+/* Gallery container scoped only to .image-gallery */
+.image-gallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;  /* Adjusted gap between images */
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* Each image box scoped to the .image-gallery */
+.image-gallery .image-box {
+  width: 10%;  /* Adjusted size of image container */
+  border: 10px solid white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Image inside the box scoped to the .image-gallery */
+.image-gallery .image-box img {
+  width: 100%;  /* Image fills 100% of its container */
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* Description below the image scoped to the .image-gallery */
+.image-gallery .image-description {
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+  line-height: 1.5;
+}
 
 
   @media screen and (max-width: 768px) {
@@ -222,4 +254,7 @@ body {
     .menu-toggle {
         display: block;
     }
+    .image-gallery .image-box {
+          width: 48%;  /* 2 images per row on tablets */
+      }
   }
