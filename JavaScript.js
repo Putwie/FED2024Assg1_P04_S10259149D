@@ -12,3 +12,4 @@ scrollToTopBtn.addEventListener("click", function () {
     behavior: "smooth" // Smooth scrolling
   });
 });
+
