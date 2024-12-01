@@ -442,74 +442,50 @@ button:hover {
 /*------------------------------------------------------------------------*/
 
 
-  @media screen and (max-width: 768px) {
-    .navbar .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #000;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 200px;
-        padding: 10px;
-        border: 1px solid #E50914;
-    }
-    .navbar .nav-links.show {
-        display: flex;
-    }
-    .menu-toggle {
-        display: block;
-    }
-      .image-gallery {
-        flex-direction: column; /* Stack images vertically */
-        gap: 15px; /* Smaller gap */
-      }
-    
-      .image-gallery .image-box {
-        width: 80%; /* Make each image box take up most of the screen width */
-        margin: 0 auto; /* Center the image boxes */
-      }
-    
-      .bottom-text iframe {
-        width: 80%; /* Make videos full width on small screens */
-        height: 250px; /* Adjust video height */
-      }
-    
-      .image-gallery-text h2 {
-        font-size: 24px; /* Smaller title */
-      }
-    
-      .image-gallery-text p {
-        font-size: 14px; /* Smaller text */
-      }
-      .bottom-text iframe {
-        width: 100%;  /* Full width on smaller screens */
-        height: 300px; /* Adjust height for smaller screens */
-      }
-      .feedback-box {
-        max-width: 400px; /* Shrink the box for tablets */
-        padding: 15px;
-      }
-    
-      .feedback-box h2 {
-        font-size: 20px; /* Reduce title size */
-      }
-    
-      .feedback-box p {
-        font-size: 13px;
-      }
-    
-      .feedback-form input,
-      .feedback-form textarea {
-        font-size: 13px; /* Smaller inputs */
-        padding: 8px;
-      }
-    
-      .feedback-form button {
-        padding: 10px 15px; /* Adjust button size */
-        font-size: 14px;
-      }
-    }
-    
+/* General responsiveness for small screens */
+@media (max-width: 768px) {
+  /* Adjust the body margin for smaller screens */
+  body {
+    margin: 10px;
+    padding: 0;
+  }
+
+  /* Center the header text and reduce padding */
+  header {
+    padding: 10px;
+    text-align: center;
+  }
   
+  header img {
+    width: 150px; /* Adjust the logo size */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Stack merch images vertically */
+  .merch-images {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .merch-image {
+    width: 80%; /* Make images take less width on small screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Adjust navigation links */
+  nav a {
+    font-size: 18px; /* Reduce font size for smaller screens */
+    margin: 0 15px; /* Reduce spacing between links */
+  }
+
+  /* Feedback form adjustments */
+  .feedback-box {
+    max-width: 90%; /* Reduce width on smaller screens */
+    padding: 20px; /* Adjust padding for compactness */
+  }
+
+  .feedback-form button {
+    width: 100%; /* Full-width button for better usability */
+  }
+}
   
