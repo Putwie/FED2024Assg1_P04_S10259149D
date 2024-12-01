@@ -1,33 +1,60 @@
-
 body {
-    font-family: 'Georgia', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #ebe7e7ec;
     color: #333;
+    overflow-x: hidden;
   }
   header {
     background-color: #292828;
-    color: #fff;
-    padding: 20px;
+    color: #e0e0e0f0;
+    padding: 5px;
     text-align: center;
-  }
+  } 
+ 
+header img {
+  width: 175px; /* Set the logo's width */
+  height: 80px; /* Maintain aspect ratio */
+  margin-top: 20px; /* Add space above the image */
+} 
 
- h2, h3, h4, h5, h6 {
-    font-family: 'Times New Roman', sans-serif;
-    font-weight: normal;
+ h2, h3, h4, h5, h6 {  /* heading */
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
 }
 
-/* Paragraphs with Roboto (clean, readable) */
-p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
+/* Style for the entire merch section */
+.merch-shop {
+  text-align: center;
+  margin-top: 40px; /* Adds space above the section */
 }
+
+/* Style for the container of the images */
+.merch-images {
+  display: flex; /* Flexbox for side-by-side images */
+  justify-content: center; /* Centers the images horizontally */
+  gap: 20px; /* Adds space between the images */
+  margin-top: 20px;
+}
+
+/* Style for each image */
+.merch-image {
+  width: 200px;    /* Fixed width for all images */
+  height: 200px;   /* Fixed height for all images */
+  object-fit: cover; /* Ensure the image covers the space without distortion */
+  border: 3px solid #979797;  /* Black border around the images */
+  border-radius: 10px;     /* Rounded corners for images */
+}
+
+/* Style for the body of the page */
+body {
+  font-family: "Robot" ,sans-serif; /* Set the font family */
+  height: 2000px; }
+
 
 /* Navigation bar container styles */
 nav {
-  background-color: #b40303; /* Red background color */
+  background-color: #a40808f3; /* Red background color */
   padding: 15px 0; /* Moderate padding for a balanced navbar height */
   text-align: center;
 }
@@ -35,7 +62,7 @@ nav {
 
 /* Navigation link styles */
 nav a {
-  color: white; /* White text for nav links */
+  color: #e0e0e0f0; /* White text for nav links */
   margin: 0 30px; /* Increased horizontal spacing between links */
   text-decoration: none; /* Remove underline */
   font-weight: bold; /* Make text bold */
@@ -72,13 +99,13 @@ nav ul li a {
     padding: 20px;
   }
   section {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
-  p {
+  p { /* rectangle black box */
     line-height: 1.6;
-    font-size: 23px;
-    color: #ffffff;   
+    font-size: 20px;
+    color: #ffffffc5;   
   }
   .project-card {
     background-color: white;
@@ -108,172 +135,312 @@ nav ul li a {
   margin-top: 50px; /* Adds some space from the top of the page */
 }
 
-/* Style for the text above the button */
+/* Style for the text above the button, for first page*/
 .above-text {
-  font-family: 'Roboto', sans-serif;
-  font-size: 35px; /* Adjust size as needed */
-  color: #000000; /* Example color */
-  margin-bottom: 20px; /* Adds space below the text */
-
-}
-
-/* Container to hold the image */
-.container {
-  width: 100%;       /* Make sure the container spans the full width */
-  max-width: 100%;   /* Prevent container from overflowing */
-  text-align: center; 
-  margin-top: 40px;  /* Add margin above the container */
-}
-
-/* Styling the image */
-.image-box {
-  width: 100%;        /* Fill the container horizontally */
-  height: 1000px;      /* Set the desired height to make it longer */
-  object-fit: cover;  /* Ensure the image covers the space without distortion */
-  display: block;     /* Block-level element for layout consistency */
-  transform: scale(1.0); /* Zoom in by 20% */
-  transition: transform 0.5s ease;  /* Optional smooth transition */
-}
-
-.center {
-  max-width: 100%;    /* Ensure the image doesn't exceed the container width */
-}
-
-
- /* Styling the rectangle box */
- .rectangle-box {
-  width: 97.6%;               /* Make the box span the entire width */
-  height: 150px;             /* Set the height of the box */
-  background: linear-gradient(to bottom, #232222, #555252); /* Set the background color */
+  width: 25%;               /* Make the box span the entire width */
+  max-width: 100%;
+  border-radius: 5px;
+  height: auto;             /* Set the height of the box */
+  background:#e1dedeec; /* Set the background color */
   padding: 20px;             /* Add space inside the box */
   text-align: center;        /* Center text horizontally */
   display: flex;             /* Use Flexbox for vertical centering */
   justify-content: center;   /* Center text horizontally */
   align-items: center;  /* Center text vertically */
+  margin: 20px auto;   /* Center the rectangle box horizontally with margin */
   margin-top: 20px;          /* Add space between the image and the rectangle box */
 }
 
+/* Hover effect for interactivity */
+.above-text:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+/**************************************************************/
+/* Container to hold the image */
+.container {
+  width: 100%;        /* Ensure the container spans the full width */
+  max-width: 100%;    /* Prevent the container from overflowing */
+  text-align: center; 
+  margin-top: 40px;   /* Add margin above the container */
+}
+
+/* Styling the image */
+.image-box {
+  width: 98%;         /* Make the image width smaller (adjust as needed) */
+  max-width: 100%;    /* Prevent image from exceeding container width */
+  height: auto;       /* Let the height adjust based on the width */
+  object-fit: cover;  /* Ensure the image covers the space without distortion */
+  display: block;     /* Block-level element for layout consistency */
+  margin: 0 auto;     /* Center the image horizontally */
+}
+
+/***************************************************************/
+
+ /* Styling the rectangle box */
+ .rectangle-box1 {
+  width: 93.7%;               /* Make the box span the entire width */
+  max-width: 100%;
+  border-radius: 2px;
+  height: 7%;             /* Set the height of the box */
+  background:#302c2cf7; /* Set the background color */
+  padding: 20px;             /* Add space inside the box */
+  text-align: center;        /* Center text horizontally */
+  display: flex;             /* Use Flexbox for vertical centering */
+  justify-content: center;   /* Center text horizontally */
+  align-items: center;  /* Center text vertically */
+  margin: 20px auto;   /* Center the rectangle box horizontally with margin */
+  margin-top: 20px;          /* Add space between the image and the rectangle box */
+}
+
+
+/*--------------------------------------------------------------*/
 button {
-  padding: 10px 20px; /* Adjust padding for rectangular shape */
-  font-size: 20px; /* Font size for text */
-  background-color: #fb3a3a;
-  color: #FFFFFF; /* White text color */
-  border: none; /* No border */
-  border-radius: 5px; /* Slightly rounded corners (optional) */
-  cursor: pointer; /* Pointer cursor on hover */
-  width: 400px;
+  background-color: #9a0a0a;  /* Dark color to match Stray Kids theme */
+  color: #ffffffe4;
+  font-size: 20px;  /* Adjust font size for readability */
+  padding: 10px 10px;  /* Increase padding for better interaction */
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  width: 40%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-bottom: 20px;  /* Space between text and button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
 }
 
 button:hover {
-  background-color: #dc1d1d; /* Slightly darker green on hover */
+  background-color: #c14646;  /* Lighter shade on hover */
+  transform: translateY(-5px);  /* Slight lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Add more shadow for depth */
 }
+/*----------------------------------------------------------------*/
 
-
+ /* Styling the rectangle box */
+ .rectangle-box2 {
+  width: 97.6%;               /* Make the box span the entire width */
+  height: 200px;             /* Set the height of the box */
+  background:#302c2c; /* Set the background color */
+  padding: 20px;             /* Add space inside the box */
+  text-align: center;        /* Center text horizontally */
+  display: flex;             /* Use Flexbox for vertical centering */
+  justify-content: center;   /* Center text horizontally */
+  text-align: left;  /* Center text vertically */
+  margin-top: 20px;          /* Add space between the image and the rectangle box */
+}
+/*---------------------------------------------------------------------------*/
 /*Scroll Button*/
 #scrollToTopBtn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #3d6bea; /* Red background */
-  color: #FFFFFF; /* White text */
-  border: none; /* No border */
-  border-radius: 45%; /* Circular shape */
-  width: 45px; /* Width of the circle */
-  height: 45px; /* Height of the circle */
-  font-size: 16px; /* Text size */
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  background-color: #1155ad; /* Blue background */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 50%; /* Circular shape */
+  width: 50px; /* Width of the circle */
+  height: 50px; /* Height of the circle */
+  font-size: 15px; /* Text size (adjust to fit arrow/icon) */
   font-weight: bold; /* Bold text */
+  display: flex; /* Flexbox for centering text */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
   cursor: pointer; /* Pointer cursor on hover */
-  display: flex; /* Use flexbox to align content */
-  align-items: center; /* Vertically center the text */
-  justify-content: center; /* Horizontally center the text */
-  text-align: center; /* Ensures text is centered within the button */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+/* Hover Effect for Scroll Button */
 #scrollToTopBtn:hover {
-  background-color: #1d4ed2; /* Darker red on hover */
-  box-shadow: 0 0 10px rgba(32, 78, 196, 0.8); /* Glowing red effect */
+  background-color: #1d4ed2; /* Darker blue on hover */
+  box-shadow: 0 0 10px rgba(29, 78, 210, 0.8); /* Glowing effect on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
-/* Style for the body of the page */
-body {
-  font-family: Aria l,sans-serif; /* Set the font family */
-  height: 2000px; }
+/* Active effect for Scroll Button */
+#scrollToTopBtn:active {
+  transform: scale(0.95); /* Shrinks slightly when clicked */
+}
 
+/*---------------------------------------------------------------------------*
 
-/*--------------------------------------------------------------------*/
- 
+/*----------------------------------------------------------------------------*/
 /* Gallery container scoped only to .image-gallery */
 .image-gallery {
   display: flex;
-  justify-content: space-between;
-  gap: 35px;  /* Adjusted gap between images */
-  flex-wrap: wrap;
-  padding: 20px;
+  flex-wrap: wrap; /* Ensures the images wrap to the next row */
+  justify-content: space-between; /* Distribute images with space between them */
+  gap: 15px; /* Space between images */
+  padding: 15px;
+  box-sizing: border-box; /* Avoids content overflow */
 }
 
 /* Each image box scoped to the .image-gallery */
 .image-gallery .image-box {
-  width: 19%; /* Adjusted size of image container */
-  border: 10px solid white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(10, 5, 142, 0.1);
-  padding: 15px;
+  width: 20%; /* Set to fit 4 images per row */
+  height: auto;
+  border: 0px solid white; /* Border color and size */
+  border-radius: 8px; /* Border radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(10, 5, 142, 0.1); /* Adds shadow for a subtle effect */
   background-color: #fff;
   text-align: center;
-  display: flex; /* Use flexbox */
-  flex-direction: column; /* Stack the image and text */
-  justify-content: flex-start; /* Align items at the top */
-  height: auto; /* Ensure height adjusts to content */
+  display: flex;
+  padding: 0px;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box; /* Includes padding and border in width/height */
 }
 
 /* Image inside the box scoped to the .image-gallery */
 .image-gallery .image-box img {
-  width: 100%;  /* Image fills 100% of its container */
+  width: 74%; 
   height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes any inline space beneath the image */
+  margin-left: auto; /* Centers the image horizontally */
+  margin-right: auto; /* Centers the image horizontally */
+  border-radius: 5px; /* Matches the frame's corner rounding */
+  margin-top: 30px;
+  object-fit: cover; /* Ensures the image fits the container without distortion */
 }
 
 /* Description below the image scoped to the .image-gallery */
 .image-gallery .image-description {
-  font-size: 18px;
+  font-size: 17px; /* Adjust size for better readability */
   color: #333;
   margin-top: 10px;
   line-height: 1.5;
+  padding: 10px 0; /* Adds spacing around the text */
+  box-sizing: border-box;
 }
 
-/*----------------------------------------------------------------------*/
+/* Text for the section above the gallery */
+.image-gallery-text {
+  text-align: center;  /* Centers the title and description */
+  margin-bottom: 20px;  /* Adds space between the text and gallery */
+}
 
-/* Adjusted Frame for New Gallery */
 
-.new-gallery {
+.image-gallery-text p {
+  font-size: 20px;
+  color: #666;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.image-gallery-bottom-text p {
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/****************************************************/
+/* Style the text at the bottom of the page */
+.bottom-text {
+  text-align: center; /* Centers the text horizontally */
+  margin-top: 30px; /* Adds space above the text */
+  font-size: 18px; /* Adjust the font size */
+  color: #0c0335; /* Change the color if needed */
+  padding: 20px; /* Add padding around the text */
+  background-color: #010000; /* Optional: Add background color */
+  border-top: 2px solid #0c0335; /* Optional: Add a line at the top */
+  font-size: 20p
+}
+
+/* Style for the iframes inside the container */
+.bottom-text iframe {
+  width: 31%; /* Makes the videos side by side with some space between */
+  height: 290px; /* Fixed height for the video */
+  border: none; /* Removes iframe border */              
+  margin: 10px; /* Adds some space around each video */
+  display: inline-block; /* Makes the videos inline and side by side */
+  vertical-align: top; /* Aligns the videos at the top */
+}
+
+/*------------------------------------------------------------------------*/
+/* General Feedback Section Styling */
+.feedback-section {
   display: flex;
-  justify-content: space-between;
-  gap: 5px;  /* Adjusted gap between images */
-  flex-wrap: wrap;
-  padding: 20px;
-  margin-top: 95px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #303030;
 }
 
-
-.new-gallery .image-box {
-  width: 15%; /* Change frame size specifically for this gallery */
-  border: 8px solid white; /* Adjust border thickness */
-  padding: 12px;  /* Adjust internal spacing */
+/* Feedback Box Styling */
+.feedback-box {
+  width: 100%;
+  max-width: 100%; /* Increased the maximum width for a wider box */
+  padding: 30px; /* Added extra padding for balance */
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #eeebeaf3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: left; /* Align text to the left */
 }
 
-/* Adjust Images Inside the New Frames */
-.new-gallery .image-box img {
-  width: 100%; /* Ensure the image fills the adjusted frame */
-  height: auto;
+/* Feedback Form Styling */
+.feedback-box h2 {
+  font-size: 28px; /* Increased font size for better readability */
+  margin-bottom: 15px;
+  color: #0c0335;
+  text-align: center; /* Center the title */
 }
 
-/* Description Inside New Frames */
-.new-gallery .image-description {
-  font-size: 16px; /* Adjust font size */
-  color: #555; /* Example color for descriptions */
-  margin-top: 8px;
+.feedback-box p {
+  font-size: 16px; /* Slightly larger text */
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center; /* Center the introductory text */
 }
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Ensure labels and inputs align */
+.feedback-form label {
+  font-size: 16px; /* Increased label font size */
+  color: #555;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 12px; /* Added more padding for a spacious look */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensures padding doesn't affect alignment */
+}
+
+.feedback-form textarea {
+  resize: none; /* Prevent resizing */
+}
+
+/* Align button within the form */
+.feedback-form button {
+  padding: 12px;
+  font-size: 18px; /* Larger font for the button */
+  background-color: #656363f2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start; /* Ensures the button aligns with the form */
+  width: 100%
+}
+
+.feedback-form button:hover {
+  background-color: #7a7878da;
+}
+/*------------------------------------------------------------------------*/
 
 
   @media screen and (max-width: 768px) {
@@ -294,7 +461,56 @@ body {
     .menu-toggle {
         display: block;
     }
-    .image-gallery .image-box {
-          width: 48%;  /* 2 images per row on tablets */
+      .image-gallery {
+        flex-direction: column; /* Stack images vertically */
+        gap: 15px; /* Smaller gap */
       }
-  }
+    
+      .image-gallery .image-box {
+        width: 80%; /* Make each image box take up most of the screen width */
+        margin: 0 auto; /* Center the image boxes */
+      }
+    
+      .bottom-text iframe {
+        width: 80%; /* Make videos full width on small screens */
+        height: 250px; /* Adjust video height */
+      }
+    
+      .image-gallery-text h2 {
+        font-size: 24px; /* Smaller title */
+      }
+    
+      .image-gallery-text p {
+        font-size: 14px; /* Smaller text */
+      }
+      .bottom-text iframe {
+        width: 100%;  /* Full width on smaller screens */
+        height: 300px; /* Adjust height for smaller screens */
+      }
+      .feedback-box {
+        max-width: 400px; /* Shrink the box for tablets */
+        padding: 15px;
+      }
+    
+      .feedback-box h2 {
+        font-size: 20px; /* Reduce title size */
+      }
+    
+      .feedback-box p {
+        font-size: 13px;
+      }
+    
+      .feedback-form input,
+      .feedback-form textarea {
+        font-size: 13px; /* Smaller inputs */
+        padding: 8px;
+      }
+    
+      .feedback-form button {
+        padding: 10px 15px; /* Adjust button size */
+        font-size: 14px;
+      }
+    }
+    
+  
+  
